@@ -1,0 +1,26 @@
+
+.travel-content{
+    width: 40%;
+    text-align: left;
+}
+.travel-destination-image{
+    width: 60%;
+}
+.travel-destination-image img{
+    width: 30%;
+    margin: 0 10px;
+    box-sizing: border-box;
+    overflow: hidden;
+    cursor: pointer;
+}
+.travel-details{
+    display: flex;
+    align-items: center;
+    height: 100vh;
+    color: white;
+    width: 80%;
+    margin: 0 auto;
+}
+.selectedItem {
+    border: 1px solid red;
+}

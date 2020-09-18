@@ -1,0 +1,29 @@
+.booking-page{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    text-align: start;
+    padding: 20px;
+    border-radius: 10px;
+    height: 100vh;
+}
+.booking-page  Button{
+    width: 100%;
+}
+.booking-content{
+    width: 45%;
+    color: white;
+}
+.booking-date{
+    width: 45%;
+    background-color: white;
+    padding: 23px;
+    border-radius: 10px;
+}
+.booking-date form > *{
+    margin-bottom: 10px;
+}
+.date-from-to input{
+    padding: 5px;
+    margin-left: 10px;
+}

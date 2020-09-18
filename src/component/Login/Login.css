@@ -1,0 +1,46 @@
+.login-page{
+    height: 100vh;
+    background-color: white;
+}
+.login-page-content{
+    width: 40%;
+    margin: 0 auto;
+    border: 1px solid;
+    padding: 20px;
+    border-radius: 5px;
+    margin-bottom: 20px;
+}
+.login-page-content button {
+    border: none;
+    background: none;
+    color: #0072ff;
+    outline: none;
+}
+.login-page-content  * {
+    width: 100%;
+    display: block;
+    text-align: left;
+}
+.login-page-content input{
+    border: none;
+    border-bottom: 1px solid gray;
+    outline: none;
+}
+.login-page-content a{
+    display: inline;
+}
+.login-page-content p{
+    font-size: 13px;
+    text-align: center;
+}
+.login-button{
+    background: #efa620;
+    text-align: center;
+    border-bottom: none;
+    margin-bottom: 10px;
+}
+.login-page-content .reset-pass{
+    margin-bottom: -15px;
+    display: block;
+    margin-left: auto;
+}
