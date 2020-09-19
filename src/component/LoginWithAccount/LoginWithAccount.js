@@ -14,7 +14,6 @@ const LoginWithAccount = () => {
             firebase.auth().signInWithPopup(provider)
             .then(res => {
                 const {displayName, email, photoURL} = res.user;
-                console.log(displayName);
                 setUser({
                     name: displayName,
                     email: email,
@@ -28,7 +27,20 @@ const LoginWithAccount = () => {
         }
 
         if(e.target.name === 'facebookLogin') {
-
+            const provider = new firebase.auth.FacebookAuthProvider();
+            firebase.auth().signInWithPopup(provider)
+            .then(res => {
+                const {displayName, email, photoURL} = res.user;
+                setUser({
+                    name: displayName,
+                    email: email,
+                    photo: photoURL,
+                })
+            })
+            .catch(function(error) {
+                var errorMessage = error.message;
+                console.log(errorMessage);
+            });
         }
     }
     return (

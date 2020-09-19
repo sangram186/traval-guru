@@ -26,10 +26,9 @@ function App() {
     passwordResetMessage: '',
 })
 
-
   const [content, setContent] = useState([]);
   return (
-    <div className="App">
+    <div className='App'>
       <useContent.Provider value={[content, setContent], [user, setUser]}>
         <Router>
           <Header></Header>
@@ -46,9 +45,9 @@ function App() {
             <Route path='/home'>
               <Home></Home>
             </Route>
-            <Route path='/hotel'>
+            <PrivateRoute path='/hotel'>
               <Hotel></Hotel>
-            </Route>
+            </PrivateRoute>
             <Route exact path='/'>
               <Home></Home>
             </Route>

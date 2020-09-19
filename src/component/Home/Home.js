@@ -6,10 +6,11 @@ import destinationImage3 from '../../Image/sundorbon.png'
 import { Link } from 'react-router-dom';
 import { useContent } from '../../App';
 import travelContents from '../fakeData';
+import Header from '../Header/Header';
 
 const Home = () => {
-    
-    
+
+
     const [content, setContent] = useContext(useContent);
     const handleClick = (e) => {
         const displayContent = travelContents.find(content => content.id === e.target.id);
@@ -25,16 +26,31 @@ const Home = () => {
     }
 
     return (
-        <div className="travel-details">
-            <div className="travel-content">
-                <h1>{content.title}</h1>
-                <p>{content.description}</p>
-                <Link to='/booking'><button onClick={() => handleClickBooking(content)}>Booking ➡</button></Link>
-            </div>
-            <div className="travel-destination-image">
-                <img id='1' onLoad={handleLoad}  onClick={handleClick} src={destinationImage1} alt="" />
-                <img id='2' onClick={handleClick} src={destinationImage2} alt="" />
-                <img id='3' onClick={handleClick} src={destinationImage3} alt="" />
+        <div className='container'>
+            <div className="travel-details">
+
+                <div className="travel-content">
+                    <h1>{content.title}</h1>
+                    <p>{content.description}</p>
+                    <Link to='/booking'><button className='login-button' onClick={() => handleClickBooking(content)}>Booking ➡</button></Link>
+                </div>
+                <div className="travel-destination-image">
+                    <div className="image-div">
+                        <img id='1' onLoad={handleLoad} onClick={handleClick} src={destinationImage1} alt="" />     
+                        <h4>Cox's Bazar</h4>
+                    </div>
+                    <div className="image-div">
+                        <img id='2' onClick={handleClick} src={destinationImage2} alt="" />     
+                        <h4>Sreemangal</h4>
+                    </div>
+                    <div className="image-div">
+                        <img id='3' onClick={handleClick} src={destinationImage3} alt="" />     
+                        <h4>Sundarban</h4>
+                    </div>
+                    
+                    
+                    
+                </div>
             </div>
         </div>
     );

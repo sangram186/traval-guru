@@ -5,10 +5,21 @@
 }
 .travel-destination-image{
     width: 60%;
+    display: flex;
 }
-.travel-destination-image img{
+.image-div{
     width: 30%;
     margin: 0 10px;
+    position: relative;
+}
+.image-div h4{
+    position: absolute;
+    bottom: 10px;
+    left: 37px;
+}
+.travel-destination-image img{
+    /* margin: 0 10px; */
+    width: 100%;
     box-sizing: border-box;
     overflow: hidden;
     cursor: pointer;
@@ -16,10 +27,9 @@
 .travel-details{
     display: flex;
     align-items: center;
-    height: 100vh;
     color: white;
-    width: 80%;
     margin: 0 auto;
+    margin-top: 150px;
 }
 .selectedItem {
     border: 1px solid red;

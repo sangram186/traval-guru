@@ -1,6 +1,7 @@
 .main-hotel-page{
     display: flex;
     justify-content: center;
+    padding-top: 40px;
 }
 .single-hotel{
     display: flex;

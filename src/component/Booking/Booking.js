@@ -15,7 +15,7 @@ const Booking = () => {
 
     const handleSubmit = e => {
         console.log(tourFrom, tourTo, tourOrigin, tourDestination)
-        e.preventDefault();
+        
     }
 
     return (
@@ -25,7 +25,7 @@ const Booking = () => {
                 <p>{data.longDescription}</p>
             </div>
             <div className="booking-date">
-                <form onSubmit={handleSubmit}>
+                <form>
                     <label htmlFor="">Origin</label>
                     <br />
                     <input onBlur={e => setTourOrigin(e.target.value)} type="text" placeholder='Your Origin' required/>
@@ -40,12 +40,12 @@ const Booking = () => {
                     <br />
                     <div className="date-from-to">
                             <label htmlFor="">From</label>
-                            <input onBlur={e => setTourFrom(e.target.value)} type="date" name="dateFrom" id="" required/>
+                            <input onBlur={e => setTourFrom(e.target.value)} type="date" name="dateFrom" value="2020-05-05" id="" required/>
                             <label htmlFor="">To</label>
-                            <input onBlur={e => setTourTo(e.target.value)} type="date" name="dateTo" id="" required/>
+                            <input onBlur={e => setTourTo(e.target.value)} type="date" name="dateTo" value="2020-05-15" id="" required/>
 
                     </div>
-                    <Link to='/hotel'><input type="submit" value="Start Booking"/></Link>
+                    <Link onClick={handleSubmit} to={tourOrigin ? '/hotel' : '/booking'}><input type="submit" value="Start Booking"/></Link>
                 </form>
             </div>
         </div>

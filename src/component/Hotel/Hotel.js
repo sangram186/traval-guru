@@ -2,26 +2,24 @@ import React, { useContext } from 'react';
 import { useContent } from '../../App';
 import hotelData from '../fakeHotelData';
 import GoogleMap from '../GoogleMap/GoogleMap';
+import Header from '../Header/Header';
 import './Hotel.css';
 
 const Hotel = () => {
     const [user, setUser] = useContext(useContent);
-    console.log(user.name);
     const data = localStorage.getItem('data');
     const getData = JSON.parse(data);
     const filterHotel = hotelData.filter(hotel => hotel.id.toString() === getData.id);
-    console.log(filterHotel)
 
-    console.log(getData);
     return (
         
-        <div style={{background: 'white'}}>
+        <div style={{background: 'white', height: '92%' }}>
             <div className='main-hotel-page container'> 
                 <div className="hotel-details">
                     {
                         filterHotel.map(hotel => {
                             const { name, badeRooms, condition, others, rating, price, photo } = hotel;
-                            console.log(hotel)
+
                             return (
                                 <div className="single-hotel">
                                     <div className="photo">
