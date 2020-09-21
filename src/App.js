@@ -14,6 +14,7 @@ import Login from './component/Login/Login';
 import Hotel from './component/Hotel/Hotel';
 import SignUp from './component/SignUp/SignUp';
 import Header from './component/Header/Header';
+import NoMatch from './component/NoMatch';
 export const useContent = createContext();
 
 function App() {
@@ -54,6 +55,9 @@ function App() {
             </Route> */}
             <Route exact path='/'>
               <Home></Home>
+            </Route>
+            <Route path="*">
+              <NoMatch />
             </Route>
             
           </Switch>

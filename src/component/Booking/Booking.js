@@ -46,9 +46,9 @@ const Booking = () => {
                     <br />
                     <div className="date-from-to">
                         <label htmlFor="">From</label>
-                        <input className='mr-2' onBlur={e => setTourFrom(e.target.value)} type="date" name="dateFrom" value="2020-05-05" id="" required/>
+                        <input className='mr-2' onBlur={e => setTourFrom(e.target.value)} type="date" name="dateFrom" defaultValue = "2020-09-09" id="" required/>
                         <label htmlFor="">To</label>
-                        <input onBlur={e => setTourTo(e.target.value)} type="date" name="dateTo" value="2020-05-15" id="" required/>
+                        <input onBlur={e => setTourTo(e.target.value)} type="date" name="dateTo" defaultValue = "2020-09-29" id="" required/>
                     </div>
                     <Link to={tourOrigin ? '/hotel' : '/booking'}><button className='login-button' onClick={handleSubmit} type='submit'>Start Booking</button></Link>
                 </form>
