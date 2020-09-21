@@ -1,4 +1,8 @@
-
+.home{
+    display: flex;
+    align-items: center;
+    height: 92.8vh;
+}
 .travel-content{
     width: 40%;
     text-align: left;
@@ -16,6 +20,7 @@
     position: absolute;
     bottom: 10px;
     left: 37px;
+    text-shadow: 2px 2px 2px #4a594a;
 }
 .travel-destination-image img{
     /* margin: 0 10px; */
@@ -29,8 +34,9 @@
     align-items: center;
     color: white;
     margin: 0 auto;
-    margin-top: 150px;
 }
-.selectedItem {
-    border: 1px solid red;
+
+.image-border{
+    border: 4px solid #f7980c;
+    border-radius: 20px;
 }

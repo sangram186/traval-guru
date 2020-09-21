@@ -20,6 +20,13 @@
     padding: 23px;
     border-radius: 10px;
 }
+.booking-date> form > input {
+    width: 50%;
+}
+.booking-date select{
+    width: 50%;
+    padding: 4px;
+}
 .booking-date form > *{
     margin-bottom: 10px;
 }

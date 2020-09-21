@@ -43,7 +43,6 @@ const Login = () => {
                     newUserInfo.name = res.user.displayName;
                     setUser(newUserInfo);
                     history.replace(from);
-
                 })
                 .catch(function (error) {
                     const errorMessage = error.message;

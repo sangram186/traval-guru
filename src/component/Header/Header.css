@@ -1,3 +1,4 @@
+
 .navBar-style img{
     width: 80px;
 }
@@ -10,4 +11,7 @@
     color: black;
     padding: 2px 10px;
     border-radius: 5px;
+}
+.nav-link{
+    padding: 0;
 }

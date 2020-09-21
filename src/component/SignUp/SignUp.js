@@ -110,7 +110,7 @@ const SignUp = () => {
                         <input onBlur={handleChange} name='confirmPassword' type="password" placeholder='Confirm Password' required /><br />
                         <input className='login-button' type="submit" value="Sign Up" /><br />
                     </form>
-                    <p>Already Have an account? <Link to='/login'>Login</Link></p>
+                    <p style={{marginTop: '0'}}>Already Have an account? <Link to='/login'>Login</Link></p>
                 </div>
                 <LoginWithAccount></LoginWithAccount>
                 {

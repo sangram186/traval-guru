@@ -13,7 +13,7 @@ const Hotel = () => {
 
     return (
         
-        <div style={{background: 'white', height: '92%' }}>
+        <div style={{background: 'white',     height: '92.8vh' }}>
             <div className='main-hotel-page container'> 
                 <div className="hotel-details">
                     {

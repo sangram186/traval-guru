@@ -1,21 +1,27 @@
-import React, { useState } from 'react';
+import React, { useContext, useState } from 'react';
 import { Link } from 'react-router-dom';
+import { useContent } from '../../App';
 import './Booking.css';
 
 const Booking = () => {
+    const [user, setUser] = useContext(useContent);
 
     const bookingData = localStorage.getItem('data')
     const data = JSON.parse(bookingData)
     // }
     const [tourOrigin, setTourOrigin] = useState('');
-    const [tourDestination, setTourDestination] = useState('');
-    const [tourFrom, setTourFrom] = useState('');
-    const [tourTo, setTourTo] = useState('');
-    
+    const [tourDestination, setTourDestination] = useState(`${data.title}`);
+    const [tourFrom, setTourFrom] = useState('2020-05-05');
+    const [tourTo, setTourTo] = useState('2020-05-15');
+
 
     const handleSubmit = e => {
-        console.log(tourFrom, tourTo, tourOrigin, tourDestination)
-        
+        const userInfo = {...user};
+        userInfo.tourFrom = tourFrom;
+        userInfo.tourTo = tourTo;
+        userInfo.tourOrigin= tourOrigin;
+        userInfo.tourDestination = tourDestination;
+        setUser(userInfo);
     }
 
     return (
@@ -28,7 +34,7 @@ const Booking = () => {
                 <form>
                     <label htmlFor="">Origin</label>
                     <br />
-                    <input onBlur={e => setTourOrigin(e.target.value)} type="text" placeholder='Your Origin' required/>
+                    <input onChange={e => setTourOrigin(e.target.value)} type="text" placeholder='Your Origin' required />
                     <br />
                     <label htmlFor="">Your Destination</label>
                     <br />
@@ -39,13 +45,12 @@ const Booking = () => {
                     </select>
                     <br />
                     <div className="date-from-to">
-                            <label htmlFor="">From</label>
-                            <input onBlur={e => setTourFrom(e.target.value)} type="date" name="dateFrom" value="2020-05-05" id="" required/>
-                            <label htmlFor="">To</label>
-                            <input onBlur={e => setTourTo(e.target.value)} type="date" name="dateTo" value="2020-05-15" id="" required/>
-
+                        <label htmlFor="">From</label>
+                        <input className='mr-2' onBlur={e => setTourFrom(e.target.value)} type="date" name="dateFrom" value="2020-05-05" id="" required/>
+                        <label htmlFor="">To</label>
+                        <input onBlur={e => setTourTo(e.target.value)} type="date" name="dateTo" value="2020-05-15" id="" required/>
                     </div>
-                    <Link onClick={handleSubmit} to={tourOrigin ? '/hotel' : '/booking'}><input type="submit" value="Start Booking"/></Link>
+                    <Link to={tourOrigin ? '/hotel' : '/booking'}><button className='login-button' onClick={handleSubmit} type='submit'>Start Booking</button></Link>
                 </form>
             </div>
         </div>

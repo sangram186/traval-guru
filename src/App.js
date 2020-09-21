@@ -1,5 +1,6 @@
 import React, { createContext, useState } from 'react';
 import './App.css';
+import './component/Responsiv.css';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import Home from './component/Home/Home';
 import PrivateRoute from './component/PrivateRoute/PrivateRoute';
@@ -48,6 +49,9 @@ function App() {
             <PrivateRoute path='/hotel'>
               <Hotel></Hotel>
             </PrivateRoute>
+            {/* <Route path='/hotel'>
+              <Hotel></Hotel>
+            </Route> */}
             <Route exact path='/'>
               <Home></Home>
             </Route>

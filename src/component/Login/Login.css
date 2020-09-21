@@ -1,6 +1,9 @@
 .login-page{
-    height: 100vh;
+    height: 92.8vh;
     background-color: white;
+    display: flex;
+    align-items: center;
+    font-size: 1.2rem;
 }
 .login-page-content{
     width: 40%;
@@ -29,15 +32,20 @@
 .login-page-content a{
     display: inline;
 }
-.login-page-content p{
+.login-page-content > p {
     font-size: 13px;
     text-align: center;
+    margin-top: 10px;
 }
 .login-button{
     background: #efa620;
     text-align: center;
     border-bottom: none;
-    margin-bottom: 10px;
+    border: none;
+    outline: none;
+    padding: 4px 10px;
+    border-radius: 5px;
+    margin-top: 10px;
 }
 .login-page-content .reset-pass{
     margin-bottom: -15px;
